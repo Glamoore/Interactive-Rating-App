@@ -1,10 +1,13 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-import {RatingProvider} from "./context/rating.context";
-import './App.css';
+//Context
+import { RatingProvider } from "./context/rating.context";
+
+//Styles
+import "./App.css";
 
 //Pages
-import RatingApp from '../src/pages/RatingApp';
+import RatingApp from "../src/pages/RatingApp";
 import RatingThankYou from "./pages/RatingThankYou";
 
 function App() {
@@ -16,7 +19,7 @@ function App() {
           <Route path="ThankYou" element={<RatingThankYou />} />
         </Routes>
       </RatingProvider>
-  </Router>
+    </Router>
   );
 }
 

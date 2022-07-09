@@ -27,24 +27,31 @@ function RatingApp() {
   };
 
   return (
-    <div className="appContainer">
-      <div className="starContainer">
-        <img src={StarIcon} className="starIcon" alt="Star Icon " />
+    <div className="thePage">
+      <div className="appContainer">
+      <div className="contentContainer">
+          <div className="starContainer">
+            <img src={StarIcon} className="starIcon" alt="Star Icon " />
+          </div>
+          <h1 className="ratingHeading">How did we do?</h1>
+          <div className="ratingTextContainer">
+          <p className="ratingText">
+            Please let us know how we did with your support request. All feedback is
+            appreciated to help us improve our offering!
+          </p>
+          </div>
+          <div className="numberBar">
+            <NumberSelector handler={ratingHandler} number={1} />
+            <NumberSelector handler={ratingHandler} number={2} />
+            <NumberSelector handler={ratingHandler} number={3} />
+            <NumberSelector handler={ratingHandler} number={4} />
+            <NumberSelector handler={ratingHandler} number={5} />
+          </div>
+          <div className="btnContainer">
+          <SubmitButton ratingSubmit={handleSubmit} />
+          </div>
       </div>
-      <h1 className="ratingHeading">How did we do?</h1>
-      <p className="ratingText">
-        Please let us know how we did with your support request. All feedback is
-        appreciated to help us improve our offering!
-      </p>
-      <div className="numberBar">
-        <NumberSelector handler={ratingHandler} number={1} />
-        <NumberSelector handler={ratingHandler} number={2} />
-        <NumberSelector handler={ratingHandler} number={3} />
-        <NumberSelector handler={ratingHandler} number={4} />
-        <NumberSelector handler={ratingHandler} number={5} />
       </div>
-      {/* Create an if statement for the submit button that validates a selection and then moves its forward if a number has been selected */}
-      <SubmitButton ratingSubmit={handleSubmit} />
     </div>
   );
 }
