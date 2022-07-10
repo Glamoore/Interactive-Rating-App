@@ -2,11 +2,9 @@ import React from 'react'
 
 function SubmitButton({ ratingSubmit }) {
     return (
-      <div>
         <button className="submitBtn" onClick={ratingSubmit}>
-          Submit
+          SUBMIT
         </button>
-      </div>
     );
   }
 

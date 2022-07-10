@@ -15,7 +15,7 @@ function RatingThankYou() {
 
   return (
       <div className="thePage">
-        <div className="appContainer">
+        <div className="appContainer thankYouAppContainer">
           <div className="contentContainer">
             <div className="imageContainer">
               <img src={ThankYouImage} className="thankYouImage" alt="Phone" />

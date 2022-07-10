@@ -10,47 +10,42 @@
 - Dark Blue: hsl(213, 19%, 18%)
 - Very Dark Blue: hsl(216, 12%, 8%) */
 
-/* APP CONTAINER */
+/*=============================================
+=          Mobile Styles Section (375px)      =
+=============================================*/
 
+/*----------  Rating Page Styles  ----------*/
+
+/* APP CONTAINER & PAGE */
 .thePage {
   width: 100%;
   height: 100vh;
-  /* border: 1px solid green; */
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .appContainer {
-  /* box-sizing: content-box; */
-  /* padding: 5% 1% 10% 1%; */
-  /* display: flex; */
-  /* flex-direction: column; */
-  /* margin: auto; */
+  min-width: 50vh;
   background-image: linear-gradient(
     180deg,
     hsl(213, 19%, 18%),
     hsl(213, 19%, 18%, 0.5)
   );
   border-radius: 15px;
-  width: 50vh;
-  height: 50vh;
-  /* border: 1px solid red; */
+  max-height: 48vh;
 }
 
 /* CONTENT CONTAINER */
-
 .contentContainer {
   display: flex;
   flex-direction: column;
-  /* border: 1px solid green; */
   width: 90%;
   margin: auto;
   gap: 1em;
 }
 
 /* STAR ICON */
-
 .starContainer {
   margin-top: 0.938em;
   display: flex;
@@ -65,8 +60,7 @@
   height: 0.78em;
 }
 
-/* HEADING */
-
+/* HEADERS */
 .ratingHeading,
 .thanksHeading {
   font-family: "Overpass", sans-serif;
@@ -77,7 +71,6 @@
 }
 
 /* RATING TEXT */
-
 .ratingText,
 .thanksText {
   font-family: "Overpass", sans-serif;
@@ -88,7 +81,6 @@
 }
 
 /* NUMBERS */
-
 .numberBar {
   display: flex;
   justify-content: space-between;
@@ -98,13 +90,12 @@
   font-size: 1rem;
   font-weight: 700;
   font-family: "Overpass", sans-serif;
-  display: inline-flex;
   color: hsl(0, 0%, 100%, 0.4);
   background-color: hsl(216, 12%, 54%, 0.1);
   border-radius: 50%;
   align-items: center;
   justify-content: center;
-  padding: 0.75em 1em 0.75em 1em;
+  padding: 0.6em 0.9em;
   border: none;
 }
 
@@ -114,28 +105,34 @@
 }
 
 /* SUBMIT BUTTON */
-
 .btnContainer {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 10vh;
+  padding-top: 0.5em;
 }
 
 .submitBtn {
   font-family: "Overpass", sans-serif;
   font-weight: 700;
   color: white;
-  padding: 0.625em 6.5em 0.625em 6.5em;
   background: hsl(25, 97%, 53%);
   border: 0.313em solid hsl(25, 97%, 53%);
   border-radius: 25px;
   font-size: 1rem;
   justify-content: center;
+  height: 40px;
+  width: 100%;
 }
 
-/* Rating Thank You Page */
+/*----------  Thank You Page Styles  ---------*/
 
+/* APP CONTAINER */
+.thankYouAppContainer {
+  min-height: 55vh;
+}
+
+/* HEADERS */
 .thanksHeading,
 .thanksText {
   align-self: center;
@@ -144,28 +141,24 @@
 
 .thanksHeading {
   font-size: 1.5625rem;
+  margin-top: 0.5em;
 }
 
-.ratingDisplay {
-  color: white;
-}
-
-/* Image */
-
+/* IMAGE */
 .imageContainer {
   margin-top: 1.563em;
   text-align: center;
 }
 
 .thankYouImage {
-  height: 6em;
+  height: 6.5em;
 }
 
-/* Confirmation text */
-
+/* PAGE TEXT */
 .confirmationContainer {
   display: flex;
   justify-content: center;
+  margin-top: 0.5em;
 }
 
 .confirmationText {
@@ -173,14 +166,70 @@
   font-size: 1rem;
   font-weight: 700;
   color: hsl(25, 97%, 53%, 0.7);
-  background-color: hsl(216, 12%, 54%, 0.1);
+  background-color: hsl(216, 12%, 54%, 0.2);
   border-radius: 15px;
   padding: 0.375em 0.5em;
-  /* width: 50%; */
 }
 
 .thanksText {
   font-weight: 700;
   line-height: 1.5;
   margin-top: 0.625em;
+  padding-bottom: 2em;
 }
+
+/*=====  End of Mobile Styles Section  ======*/
+
+/*=============================================
+=          Media Queries Styles Section       =
+=============================================*/
+
+@media (min-width: 360px) {
+  .appContainer {
+    max-width: 200px;
+    min-height: 60vh;
+  }
+}
+
+@media (min-width: 390px) {
+  .appContainer {
+    min-width: 50vh;
+    max-height: 47vh;
+  }
+}
+
+@media (min-width: 820px) {
+  .appContainer {
+    min-width: 50vh;
+    min-height: 57vh;
+  }
+
+  .starContainer {
+    height: 4vh;
+    width: 4vh;
+    border-radius: 50%;
+  }
+
+  .starIcon {
+    height: 0.6em;
+  }
+}
+@media (min-width: 1440px) {
+  .appContainer {
+    max-width: 100px;
+    min-height: 35%;
+    border: 1px solid red;
+  }
+
+  .starContainer {
+    height: 4vh;
+    width: 4vh;
+    border-radius: 50%;
+  }
+
+  .starIcon {
+    height: 1em;
+  }
+}
+
+/*==  End of Media Queries Styles Section ==*/
