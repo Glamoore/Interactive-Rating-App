@@ -90,7 +90,7 @@
   font-size: 1rem;
   font-weight: 700;
   font-family: "Overpass", sans-serif;
-  color: hsl(0, 0%, 100%, 0.4);
+  color: hsl(0, 1%, 100%, 0.7);
   background-color: hsl(216, 12%, 54%, 0.1);
   border-radius: 50%;
   align-items: center;
@@ -104,6 +104,11 @@
   border: 1px solid hsl(25, 97%, 53%);
 }
 
+.numberSelector:focus {
+  background: hsl(217, 12%, 63%);
+  border: 1px solid hsl(217, 12%, 63%);
+}
+
 /* SUBMIT BUTTON */
 .btnContainer {
   display: flex;
@@ -115,7 +120,7 @@
 .submitBtn {
   font-family: "Overpass", sans-serif;
   font-weight: 700;
-  color: white;
+  color: hsl(0, 1%, 100%, 0.7);
   background: hsl(25, 97%, 53%);
   border: 0.313em solid hsl(25, 97%, 53%);
   border-radius: 25px;
@@ -123,6 +128,12 @@
   justify-content: center;
   height: 40px;
   width: 100%;
+}
+
+.submitBtn:active {
+  color: hsl(25, 97%, 53%);
+  background-color: hsl(0, 1%, 100%);
+  border: 0.313em solid hsl(0, 1%, 100%);
 }
 
 /*----------  Thank You Page Styles  ---------*/
@@ -186,8 +197,13 @@
 
 @media (min-width: 360px) {
   .appContainer {
-    max-width: 200px;
-    min-height: 60vh;
+    max-width: 50vh;
+    min-height: 50vh;
+  }
+
+  .thankYouAppContainer {
+    padding: 0.1em;
+    min-height: 55vh;
   }
 }
 
@@ -217,7 +233,7 @@
 @media (min-width: 1440px) {
   .appContainer {
     min-width: 40vh;
-    min-height: 35vh;
+    min-height: 43vh;
   }
 
   .starContainer {
@@ -230,6 +246,21 @@
     height: 1em;
   }
 
+  .contentContainer {
+    padding: 0 0.625em;
+  }
+
+  .numberBar {
+    padding: 0 0.3125em;
+  }
+
+  .submitBtn {
+    width: 95%;
+  }
+
+  .thankYouAppContainer {
+    padding: 0.625em;
+  }
 }
 
 /*==  End of Media Queries Styles Section ==*/
