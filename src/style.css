@@ -216,9 +216,8 @@
 }
 @media (min-width: 1440px) {
   .appContainer {
-    max-width: 100px;
-    min-height: 35%;
-    border: 1px solid red;
+    min-width: 40vh;
+    min-height: 35vh;
   }
 
   .starContainer {
@@ -230,6 +229,7 @@
   .starIcon {
     height: 1em;
   }
+
 }
 
 /*==  End of Media Queries Styles Section ==*/
